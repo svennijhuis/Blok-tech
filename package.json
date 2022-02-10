@@ -1,0 +1,24 @@
+{
+  "name": "blok-tech",
+  "version": "1.0.0",
+  "description": "School opdracht",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svennijhuis/Blok-tech.git"
+  },
+  "keywords": [
+    "Tech",
+    "blok",
+    "3"
+  ],
+  "author": "Sven Nijhuis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svennijhuis/Blok-tech/issues"
+  },
+  "homepage": "https://github.com/svennijhuis/Blok-tech#readme"
+}
