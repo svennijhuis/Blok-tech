@@ -1,2 +1,4 @@
 node_mdoules
 .DS_Store/
+.prettierrc
+.env

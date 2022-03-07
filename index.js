@@ -12,20 +12,24 @@ extname: 'hbs',
 defaultLayout: 'index'
 }));
 
+// css-img
 app.use(express.static('static'))
 
-
+// home
 app.get('/', (req, res) => {
 res.render('main');
 });
-
+// about
 app.get('/about', (req, res) => {
   res.render('about');
   });
 
 
-app.listen(port, () => console.log(`App listening to port ${port}`));
+app.get('*', (req, res) => {
+  res.render('errors');
+});
 
+app.listen(port, () => console.log(`App listening to port ${port}`));
 
 
 
