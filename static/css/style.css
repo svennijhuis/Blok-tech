@@ -36,18 +36,21 @@ main{
 
 /* body main */
 
-main{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
+
+
+article{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
 
 /* input fields*/
 
 .placeholder-input-field{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    grid-column: 1/-1;
+    width: 50%;
 }
 
 .placeholder-input-field:nth-of-type(1){
@@ -57,11 +60,13 @@ main{
 	opacity: 0;
     order: 0;
     transition: .5s;
+    font-size: 11px;
 }
 
 .placeholder-input-field input:focus ~ label  {
 	opacity: 1 !important;
     transition: .5s;
+    font-size: 11px;
 }
 
 .placeholder-input-field input:focus::placeholder  {
@@ -71,8 +76,31 @@ main{
 .placeholder-input-field input{
     order: 1;
 }
+input[type=text], input[type=email]{
+    width: 90%;
+    height: 40px;
+    border: none;
+    background: white;
+    border-bottom: 3px solid rgb(6, 6, 153);
+    margin-bottom: 13px;  
+}
 
+input[type=text]:focus-visible, input[type=email]:focus-visible{
+  outline: none;
+}
 
+button{
+    background: rgba(6, 6, 153, 0.5);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40px;
+}
 
 /* Footer */
 
@@ -84,4 +112,83 @@ footer p {
 footer {
 	display: flex;
 	justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
+
+.d-flex-wrap{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.wrap-article{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h3{
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+input[type=radio]{
+  padding-top: 30px;
+}
+
+.pt-full{
+  padding-top: 30px;
+}
+
+.pt-half{
+  padding-top: 15px;
+}
+
+.article-voorstel{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+p{
+  font-size: 14px;
+}
+
+h1{
+  padding-bottom: 10px;
+}
+
+textarea{
+    border: none;
+    background: white;
+    border-bottom: 3px solid rgb(6, 6, 153);
+    margin-bottom: 13px;
+}
+
+textarea:focus-visible{
+  outline: none;
+}
+
+.font-size-small{
+  font-size: 11px;
+  font-weight: 300;
+}
+
+
+/* input:invalid {
+  background-color: #ffdddd;
+}
+form:invalid {
+  border: 5px solid #ffdddd;
+}
+input:valid {
+  background-color: #ddffdd;
+}
+form:valid {
+  border: 5px solid #ddffdd;
+}
+input:required {
+  border-color: #800000;
+  border-width: 3px;
+} */
