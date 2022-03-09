@@ -36,7 +36,10 @@ app.post('/createUser', (req, res) => {
 	console.log(req.body);
 	const name = req.body.name;
 	const surname = req.body.surname;
-	userCollection.insertOne({ name: name, surname: surname });
+	const mail = req.body.mail;
+	const streetnameAndNumber = req.body.streetnameAndNumber
+
+	userCollection.insertOne({ name: name, surname: surname, mail: mail, streetnameAndNumber: streetnameAndNumber });
 });
 
 // home
