@@ -36,7 +36,9 @@ main{
 
 /* body main */
 
-
+body{
+  background-color: #F8F4F1;
+}
 
 article{
   display: flex;
@@ -44,6 +46,15 @@ article{
   flex-direction: row;
 }
 
+
+header{
+  height: 100px;
+  background: #F8F4F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 
 /* input fields*/
 
@@ -75,13 +86,13 @@ article{
 
 .placeholder-input-field input{
     order: 1;
+    padding: 10px;
 }
 input[type=text], input[type=email]{
     width: 90%;
     height: 40px;
     border: none;
     background: white;
-    border-bottom: 3px solid rgb(6, 6, 153);
     margin-bottom: 13px;  
 }
 
@@ -90,7 +101,7 @@ input[type=text]:focus-visible, input[type=email]:focus-visible{
 }
 
 button{
-    background: rgba(6, 6, 153, 0.5);
+    background: #fa9ef7;
     outline: none;
     box-shadow: none;
     border: none;
@@ -100,20 +111,29 @@ button{
     font-weight: 600;
     color: #000;
     margin-top: 40px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+button:hover{
+  background: #fff;
+  transition: 0.3s;
 }
 
 /* Footer */
 
 footer p {
-	color: rgb(228, 228, 228);
+	color: #000;
 	font-size: 14px;
 }
 
 footer {
 	display: flex;
 	justify-content: center;
-  padding-top: 30px;
+  padding-top: 5px;
   padding-bottom: 5px;
+  background: #F8F4F1;
+  margin-top: 100px;
 }
 
 .d-flex-wrap{
@@ -176,19 +196,10 @@ textarea:focus-visible{
 }
 
 
-/* input:invalid {
-  background-color: #ffdddd;
+input[type=text]:invalid {
+  background-color: #ffff;
 }
-form:invalid {
-  border: 5px solid #ffdddd;
-}
-input:valid {
+
+input[type=text]:valid {
   background-color: #ddffdd;
-}
-form:valid {
-  border: 5px solid #ddffdd;
-}
-input:required {
-  border-color: #800000;
-  border-width: 3px;
-} */
+} 

@@ -1,4 +1,11 @@
 		{{#each users}}
-			<li>{{this.name}}</li>
+				<p>{{this.name}}</p>
+				<p>{{this.surname}}</p>
+				<p><a href="mailto:{{this.mail}}">{{this.mail}}</a></p>
+				<p>{{this.streetnameAndNumber}}</p>
+				<img src="{{this.image}}" alt="">
+				<form action="/deleteUser"  method='POST'>
+					<button>delete</button>
+				</form>
 		{{/each}}
 

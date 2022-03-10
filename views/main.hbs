@@ -4,7 +4,7 @@
 		<p> ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p>
 	</section>
 	<section>
-		<form action='/createUser' method='POST'>
+		<form action='/createUser' method='POST' enctype="multipart/form-data">
 		<article>
 			<h3>persoonsgegevens</h3>
 		</article>
@@ -27,19 +27,19 @@
 					<input type='text' placeholder='Straatnaam + nummer' name='streetnameAndNumber' required/>
 					<label for='voornaam'>Straatnaam + nummer</label>
 				</div>
-				<div class='placeholder-input-field'>
+				{{!-- <div class='placeholder-input-field'>
 					<input type='text' placeholder='Plaats' name='city' required/>
 					<label for='voornaam'>Plaats</label>
 				</div>
 				<div class='placeholder-input-field'>
 					<input type='text' placeholder='Postcode' name='Postal' required/>
 					<label for='voornaam'>Postcode</label>
-				</div>
+				</div> --}}
 			</article>
 			<article>
 				<h3>Tarief</h3>
 			</article>
-			<article>
+			{{!-- <article>
 				<div class='placeholder-input-field'>
 					<input type='text' placeholder='Uurtarief' name='HourlyRate' required/>
 					<label for='voornaam'>Uurtarief</label>
@@ -47,8 +47,8 @@
 			</article>
 			<article>
 				<h3>Dagen beschikbaar <span class="font-size-small">Gehele dag / Ochtend / Middag / Avond</span></h3>
-			</article>
-			<article class="wrap-article">
+			</article> --}}
+			{{!-- <article class="wrap-article">
 				<div class="d-flex-wrap">
 					<label for='monday'>Maandag</label>
 					<input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='monday' required/>
@@ -80,15 +80,15 @@
 			</article>
 			<article>
 				<h3>Voorstellen</h3>
-			</article>
+			</article> --}}
 			<article class="article-voorstel">
-				<textarea  name="WieBenIk" placeholder='Wie ben ik' rows="3" required></textarea>
-				<input class="pt-half" type="file" name="filename">
+				{{!-- <textarea  name="WieBenIk" placeholder='Wie ben ik' rows="3" ></textarea> --}}
+				<input class="pt-half" type="file" name="image">
 			</article>
-			<article class="pt-full">
+			{{!-- <article class="pt-full">
 				<input type="radio" name="voorwaarde" value="voorwaarde" required>
  				<label for="voorwaarde">Accepteer <u><a href="">de Algemene voorwaarden.</a></u></label><br>
-			</article>
+			</article> --}}
 			<button>Voeg je profiel toe</button>
 		</form>
 	</section>
