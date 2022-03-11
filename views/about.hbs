@@ -1,11 +1,36 @@
+<main>
 		{{#each users}}
-				<p>{{this.name}}</p>
-				<p>{{this.surname}}</p>
-				<p><a href="mailto:{{this.mail}}">{{this.mail}}</a></p>
-				<p>{{this.streetnameAndNumber}}</p>
-				<img src="{{this.image}}" alt="">
-				<form action="/deleteUser"  method='POST'>
-					<button>delete</button>
-				</form>
+			<section class="pt-half">
+				<article>
+					<div>
+						<img src="{{this.image}}" alt="">
+					</div>
+					<div>
+						<p>{{this.name}} {{this.surname}}</p>
+						<p{{this.city}}></p>
+						<p>{{this.WieBenIk}}</p>
+					</div>
+				</article>
+				<article>
+					<div>
+						<p>Uurtarief{{this.HourlyRate}}</p>
+						<p>Wanneer beschikbaar:</p>
+						<p>Maandag: {{this.monday}}</p>
+						<p>Dinsdag: {{this.tuesday}}</p>
+						<p>Woensdag: {{this.wednesday}}</p>
+						<p>Donderdag: {{this.thursday}}</p>
+						<p>Vrijdag: {{this.friday}}</p>
+						<p>Zaterdag: {{this.saturday}}</p>
+						<p>Zondag: {{this.sunday}}</p>
+					</div>
+					<div>
+						<p><a href="mailto:{{this.mail}}">{{this.mail}}</a></p>
+						<form action="/deleteUser"  method='POST'>
+							<button name="deleteId" value="{{this._id}}">delete</button>
+						</form>
+					</div>
+				</article>
+			</section>
 		{{/each}}
+</main>
 

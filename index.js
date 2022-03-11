@@ -58,15 +58,28 @@
 // app.listen(port, () => console.log(`App listening to port ${port}`));
 
 
-
+const fs = require('fs')
 const express = require('express');
 const app = express();
 const port = 3000;
 // .env
 require('dotenv').config()
-// image
+
+
+// voegt de image toe aan de map uploads
 const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' })
+// const upload = multer({ dest: 'static/uploads/' })
+const storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+	cb(null, 'static/uploads');
+	},
+	filename: (req, file, cb) => {
+	cb(null, Date.now() + '.png');
+	}
+	});
+	const upload = multer({
+	storage
+	});
 
 
 
@@ -96,48 +109,68 @@ client.connect(err => {
 	console.log('connection made');
 });
 
-// css-img
+// static info
 app.use(express.static('static'));
+
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
 
 
 // form
-app.post('/createUser', upload.single('image'), (req, res, next) => {
-	console.log(req.body);
-	const { name, surname, mail, streetnameAndNumber } = req.body;
-	userCollection.insertOne({ name: name, surname: surname, mail: mail, streetnameAndNumber: streetnameAndNumber });
+app.post('/createUser', upload.single('image'), async (req, res, next) => {
+	const { name, surname, mail, streetnameAndNumber, city, Postal, HourlyRate, monday, tuesday, wednesday, thursday, friday, saturday, sunday, WieBenIk } = req.body;
+	await userCollection.insertOne({ 
+		name: name, 
+		surname: surname, 
+		mail: mail, 
+		streetnameAndNumber: streetnameAndNumber, 
+		city: city,
+		Postal: Postal,
+		HourlyRate: HourlyRate,
+		monday: monday,
+		tuesday: tuesday,
+		wednesday: wednesday,
+		thursday: thursday,
+		friday: friday,
+		saturday: saturday,
+		sunday: sunday,
+		WieBenIk: WieBenIk,
+		image: `uploads/${req.file.filename}`
+	});
 	res.redirect('/about')
 });
 
+
+// delete gebruiker
 app.post('/deleteUser', (req, res) => {
-	console.log(req.body);
-	const { name, surname, mail, streetnameAndNumber } = req.body;
-	userCollection.deleteOne({ name: name, surname: surname, mail: mail, streetnameAndNumber: streetnameAndNumber });
+	// userCollection.findOne({id: req.body._id}, (err, item) => {
+	// 	const path = `static/${item.image}`
+	// 	console.log(item);
+	// 	fs.unlink(path, (err) =>{
+	// 		console.log(err);
+	// 	})
+	// } );
+	userCollection.deleteOne({  id: req.body._id });
 	res.redirect('/about')
 });
 
 
-app.post('/createUser', upload.single('image'), function (req, res, next) {
-	req.file
-  })
 
-// home
+// aanmeld pagina
 app.get('/',  (req, res) => {
 	res.render('main');
 });
-// about
+// about - algemene pagina
 app.get('/about', async (req, res) => {
 	const users = await userCollection.find().toArray();
-	console.log(users);
-	res.render('about', { users, image: req.file });
+	// console.log(users);
+	res.render('about', { users });
 });
-// error
+
+// error pagina
 app.get('*', (req, res) => {
 	res.render('errors');
 });
-
-
 
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
