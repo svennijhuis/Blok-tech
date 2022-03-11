@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .prettierrc
 .env
+static/.DS_Store
+
