@@ -17,8 +17,7 @@ februari-april 2022
 
 </details> -->
 
-# Meld je aan als oppasser
-![alt text](https://raw.githubusercontent.com/BVictorB/cmd-dating-app/master/bannerimage.jpg)
+# Meld je aan als oppassergit 
 
 Dit is mijn GitHub repository voor mijn oppas website future. Ik heb besliten om een formulier te maken waar jij je kan aanmelden met je persoonlijke gegevens.
 Naast het aanmeldformulier kan je ook alle profielen bekijken en daarnaast contact opnemen met die genen via de mail of je kan de profiel verwijderen(Wordt verwijderd uit de database).
