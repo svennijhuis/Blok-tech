@@ -60,7 +60,7 @@
 const fs = require('fs');
 const express = require('express');
 const app = express();
-const port = process.env.port;
+const port = process.env.PORT || 3000;
 // .env
 require('dotenv').config();
 
