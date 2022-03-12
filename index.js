@@ -23,6 +23,7 @@ const upload = multer({
 //Loads the handlebars module
 const handlebars = require('express-handlebars');
 //Sets our app to use the handlebars engine
+app.set('views', './views')
 app.set('view engine', 'hbs');
 //Sets handlebars configurations (we will go through them later on)
 app.engine(
@@ -82,7 +83,6 @@ app.post('/deleteUser', (req, res) => {
 	userCollection.deleteOne({ id: req.body._id });
 	res.redirect('/algemeen');
 });
-
 
 // aanmeld pagina
 app.get('/', (req, res) => {

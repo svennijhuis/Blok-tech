@@ -49,11 +49,6 @@ $ node index.js
 localhost:3000 in browser
 
 #
-### website online bekijken
-```
-<a href="https://oppassen.herokuapp.com" target="_blank">Oppas app - website</a>
-```
-#
 
 ### Packages
 Om mijn website te te bouwen heb ik gebruik gemaakt van meerdere packages:
