@@ -307,7 +307,7 @@ textarea:focus-visible{
   visibility: hidden;
 }
 .custom-file-input::before {
-  content: 'Voeg een profiel foto toe (png)';
+  content: 'Voeg een profiel foto toe (jpg)';
   display: inline-block;
   background: linear-gradient(top, #f9f9f9, #e3e3e3);
   border: 1px solid #999;
@@ -356,6 +356,7 @@ textarea:focus-visible{
   padding: 30px 20px;
   border-radius: 25px;
   width: 100%;
+  height: min-content;
 }
 
 /* grid */

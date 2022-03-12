@@ -17,15 +17,15 @@ februari-april 2022
 
 </details> -->
 
-# Meld je aan als oppassergit 
+# Meld je aan als oppasser
 
 Dit is mijn GitHub repository voor mijn oppas website future. Ik heb besliten om een formulier te maken waar jij je kan aanmelden met je persoonlijke gegevens.
 Naast het aanmeldformulier kan je ook alle profielen bekijken en daarnaast contact opnemen met die genen via de mail of je kan de profiel verwijderen(Wordt verwijderd uit de database).
 
-Dit is mijn job story: 
+###  Dit is mijn job story: 
 > "Ik wil graag werk zoeken als oppas, daarom ga ik mij aanmelden bij een oppas website. In het formulier moet ik mijn gegevens toevoegen. Daarnaast moet ik mij voorstellen en aangeven wanneer ik kan oppassen en wat ik wil verdienen. Ik moet wel een goeie foto uploaden, omdat die word gebruikt als profiel afbeelding"
 
-Hier moet je opletten als je kijkt naar mijn future:
+### Hier moet je opletten als je kijkt naar mijn future:
 > "Aanmeld pagina"
 * Alle informatie de een gebruiker opgeeft word opgeslagen in de database.
 * Je kan een profiel foto toevoegen.
@@ -44,23 +44,25 @@ $ git clone https://github.com/svennijhuis/Blok-tech.git .
 #
 ### Run
 ```
-$ npm nodemon index.js
+$ node index.js
 ```
 localhost:3000 in browser
 
 #
 ### website online bekijken
+```
 <a href="https://oppassen.herokuapp.com" target="_blank">Oppas app - website</a>
+```
 #
 
 ### Packages
 Om mijn website te te bouwen heb ik gebruik gemaakt van meerdere packages:
 * <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a>
-* <a href="https://www.npmjs.com/package/express" target="_blank">express</a>
-* <a href="https://www.npmjs.com/package/express-handlebars" target="_blank">express-handlebars</a>
-* <a href="https://www.npmjs.com/package/heroku" target="_blank">heroku</a>
-* <a href="https://www.npmjs.com/package/mongodb" target="_blank">mongodb</a>
-* <a href="https://www.npmjs.com/package/multer" target="_blank">multer</a>
+* <a href="https://www.npmjs.com/package/express" target="_blank">Express</a>
+* <a href="https://www.npmjs.com/package/express-handlebars" target="_blank">Express-Handlebars</a>
+* <a href="https://www.npmjs.com/package/heroku" target="_blank">Heroku</a>
+* <a href="https://www.npmjs.com/package/mongodb" target="_blank">MongoDB</a>
+* <a href="https://www.npmjs.com/package/multer" target="_blank">Multer</a>
 * <a href="https://www.npmjs.com/package/nodeman" target="_blank">nodeman</a>
 
 #

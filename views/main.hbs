@@ -40,18 +40,16 @@
 				<h3>Uurtarief</h3>
 			</article>
 			<article>
-						{{!-- <input type='text' placeholder='Uurtarief' name='HourlyRate' required/> --}}
 				<select name="HourlyRate">
 					<option value="8,00">€8,00</option>
 					<option value="9,00">€9,00</option>
 					<option value="10,00">€10,00</option>
 					<option value="11,00">€11,00</option>
-					<option value="12,00">€11,00</option>
+					<option value="12,00">€12,00</option>
 					<option value="13,00">€13,00</option>
 					<option value="14,00">€14,00</option>
 					<option value="15,00">€15,00</option>
 				</select>
-						{{!-- <label for='uurtarief'>Uurtarief</label> --}}
 			</article>
 		</section>
 		<section class="background-section">
@@ -61,7 +59,6 @@
 			<article>
 					<div class="d-flex-wrap">
 						<label for='monday'>Maandag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='monday' /> --}}
 						<select name="monday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -72,7 +69,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='tuesday'>Dinsdag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='tuesday'/> --}}
 						<select name="tuesday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -83,7 +79,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='wednesday'>Woensdag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='wednesday' /> --}}
 						<select name="wednesday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -94,7 +89,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='thursday'>Donderdag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='thursday' /> --}}
 						<select name="thursday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -105,7 +99,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='friday'>Vrijdag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='friday' /> --}}
 						<select name="friday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -116,7 +109,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='saturday'>Zaterdag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='saturday'/> --}}
 						<select name="saturday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -127,7 +119,6 @@
 					</div>
 					<div class="d-flex-wrap">
 						<label for='sunday'>Zondag</label>
-						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='sunday' /> --}}
 						<select name="sunday">
 							<option value="Niet beschikbaar">Niet beschikbaar</option>
 							<option value="Gehele dag">Gehele dag</option>
@@ -144,12 +135,12 @@
 				</article>
 				<article class="article-voorstel">
 					<textarea  name="WieBenIk" placeholder='Wie ben ik' rows="3" maxlength="300" required></textarea>
-					<input class="pt-half custom-file-input" type="file" name="image" accept="image/png" required>
+					<input class="pt-half custom-file-input" type="file" name="image" accept="image/jpg" required>
 				</article>
 		</section>
 		<section class="background-section">
 				<article class=" article-voorstel-input">
-					<input type="checkbox" name="voorwaarde" value="voorwaarde" required>
+					<input type="checkbox" name="voorwaarde" id="term" value="voorwaarde" required>
 					<label for="voorwaarde">Accepteer <u><a href="#">de Algemene voorwaarden.</a></u></label><br>
 				</article>
 		</section>
