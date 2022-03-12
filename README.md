@@ -49,14 +49,27 @@ $ npm nodemon index.js
 localhost:3000 in browser
 
 #
+### website online bekijken
+<a href="https://oppassen.herokuapp.com" target="_blank">Oppas app - website</a>
+#
+
 ### Packages
-Bekijk mijn <a href="" target="_blank">packages wiki pagina</a> om er achter te komen welke to find out more about the packages that I used while creating this feature. 
+Om mijn website te te bouwen heb ik gebruik gemaakt van meerdere packages:
+* <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a>
+* <a href="https://www.npmjs.com/package/express" target="_blank">express</a>
+* <a href="https://www.npmjs.com/package/express-handlebars" target="_blank">express-handlebars</a>
+* <a href="https://www.npmjs.com/package/heroku" target="_blank">heroku</a>
+* <a href="https://www.npmjs.com/package/mongodb" target="_blank">mongodb</a>
+* <a href="https://www.npmjs.com/package/multer" target="_blank">multer</a>
+* <a href="https://www.npmjs.com/package/nodeman" target="_blank">nodeman</a>
+
 #
 ### Sources
-De meeste informatie heb ik gekregen met informatie die ik uit de les kon halen. Daarnaast heb ik ook veel informatie gekregen via student assistenten en leerlingen. Ook heb ik op internet tutorial bekeken en artikelen bekeken die mij extra informatie gaven.
+De meeste informatie heb ik gekregen met informatie die ik uit de les kon halen. Daarnaast heb ik ook veel informatie gekregen via student assistenten en leerlingen. Ook heb ik op internet tutorial bekeken en artikelen bekeken die mij extra informatie gaven:
 * <a href="https://www.npmjs.com/package/dotenv" target="_blank">Dotenv</a> 
 * <a href="https://www.npmjs.com/package/express-handlebars" target="_blank">express-handlebars</a> en <a href="https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65" target="_blank">dit artikel</a>
 * <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>
 * <a href="https://www.npmjs.com/package/multer" target="_blank">Multer</a>
+* <a href="https://devcenter.heroku.com/articles/config-vars" target="_blank">Heroku</a>
 
 

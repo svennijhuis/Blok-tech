@@ -54,6 +54,10 @@ article{
   justify-content: flex-start;
 }
 
+.article-voorstel-input a{
+color: #000;
+}
+
 select{
     background: #F5F5F5;
     border: none;
@@ -63,6 +67,7 @@ select{
     margin-top: 5px;
     margin-bottom: 10px;
     min-width: 200px;
+    color: #000;
 }
 
 
@@ -78,6 +83,7 @@ header{
 header a{
   text-decoration: none;
   margin-top: 25px;
+  color: #CFA2F6;
 }
 
 header h2{
@@ -172,7 +178,7 @@ button.button-aanmelden{
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    margin-top: 40px;
+    margin-top: 20px;
     transition: 0.3s;
     border-radius: 10px;
 }
@@ -262,6 +268,11 @@ textarea{
     margin-bottom: 13px;
     padding: 10px;
     border-radius: 10px;
+    color: #000;
+}
+
+textarea::placeholder{
+  color: #000;
 }
 
 textarea:focus-visible{
@@ -371,6 +382,7 @@ textarea:focus-visible{
 .grid-3{
   display: grid;
   grid-template-columns: 10fr;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -394,6 +406,7 @@ textarea:focus-visible{
   .grid-3{
     display: grid;
     grid-template-columns: 10fr 10fr;
+    margin-bottom: 0px;
   }
 }
 
