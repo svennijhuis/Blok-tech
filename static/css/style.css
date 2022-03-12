@@ -457,7 +457,7 @@ textarea:focus-visible{
   grid-column-end: -1;
 }
 
-.grid-3 .Avond, .grid-3 .Middag, .grid-3 .Ochtend{
+.grid-3 .Avond, .grid-3 .Middag, .grid-3 .Ochtend, .grid-3 .Gehele{
   background-color: #b4ffb4;
 }
 
