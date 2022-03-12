@@ -1,0 +1,41 @@
+<main class="pagina-algemeen">
+		{{#each users}}
+			<section class="background-person">
+				<article class="grid-container">
+					<div class="grid-1">
+						<div class="img-header" style="background-image: url('{{this.image}}');"></div>
+						{{!-- <img class="img-header" src="{{this.image}}" alt=""> --}}
+					</div>
+					<div class="grid-2">
+						<div>
+							<h3>{{this.name}} {{this.surname}}</h3>
+							<h4>{{this.city}}</h4>
+							<p>{{this.WieBenIk}}</p>
+						</div>
+						<h3 class="hour-h3">Uurtarief: <span>€{{this.HourlyRate}}</span> </h3>
+					</div>
+				</article>
+				<article class="grid-container-1">
+					<div class="grid-3">
+						<h3 class="start-end-grid">Wanneer beschikbaar:</h3>
+						<p><strong>Maandag:</strong> <span class="{{this.monday}}">{{this.monday}}</span></p>
+						<p><strong>Dinsdag:</strong> <span class="{{this.tuesday}}">{{this.tuesday}}</span></p>
+						<p><strong>Woensdag:</strong> <span class="{{this.wednesday}}">{{this.wednesday}}</span></p>
+						<p><strong>Donderdag:</strong> <span class="{{this.thursday}}">{{this.thursday}}</span></p>
+						<p><strong>Vrijdag:</strong> <span class="{{this.friday}}">{{this.friday}}</span></p>
+						<p><strong>Zaterdag:</strong> <span class="{{this.saturday}}">{{this.saturday}}</span></p>
+						<p><strong>Zondag:</strong> <span class="{{this.sunday}}">{{this.sunday}}</span></p>
+					</div>
+					<div class="grid-4">
+						<a class="button-algemeen" href="mailto:{{this.mail}}"><img class="img-icons" src="/img/mail.svg" alt="mail"></a>
+						<div class="button-algemeen">
+							<form action="/deleteUser"  method='POST'>
+								<button class="button-form-delete" name="deleteId" value="{{this._id}}"><img class="img-icons" src="/img/delete.svg" alt="delete"></button>
+							</form>
+						</div>
+					</div>
+				</article>
+			</section>
+		{{/each}}
+</main>
+

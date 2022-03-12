@@ -9,7 +9,7 @@
 }
 
 * {
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Newsreader', serif;
 	margin-block-start: 0em;
 	margin-block-end: 0em;
 	margin-inline-start: 0em;
@@ -22,6 +22,7 @@ main{
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
+    min-height: 90vh;
   }
   
   @media screen and (min-width: 62em) {
@@ -44,16 +45,62 @@ article{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
+}
+
+.article-voorstel-input{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+select{
+    background: #F5F5F5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    min-width: 200px;
 }
 
 
 header{
-  height: 100px;
   background: #F8F4F1;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+  flex-direction: column;
+}
+
+header a{
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+header h2{
+    font-size: 60px;
+    line-height: 70px;
+    color: #CFA2F6;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+header h2:hover{
+  color: #E5CAFD !important;
+  transition: 0.3s;
+}
+
+header article:nth-of-type(1){
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-right: 50px;
 }
 
 /* input fields*/
@@ -61,7 +108,14 @@ header{
 .placeholder-input-field{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+}
+@media (min-width: 576px) { 
+    .placeholder-input-field{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+  }
 }
 
 .placeholder-input-field:nth-of-type(1){
@@ -88,22 +142,27 @@ header{
     order: 1;
     padding: 10px;
 }
+
+.placeholder-input-field input::placeholder{
+  color: #000;
+}
 input{
   padding: 10px;
 }
 input[type=text], input[type=email]{
-    width: 90%;
-    height: 40px;
+    width: 95%;
+    height: 50px;
     border: none;
-    background: white;
+    background: #F5F5F5;
     margin-bottom: 13px;  
+    border-radius: 10px;
 }
 
 input[type=text]:focus-visible, input[type=email]:focus-visible{
   outline: none;
 }
 
-button{
+button.button-aanmelden{
     background: #fa9ef7;
     outline: none;
     box-shadow: none;
@@ -118,8 +177,8 @@ button{
     border-radius: 10px;
 }
 
-button:hover{
-  background: #fff;
+button.button-aanmelden:hover{
+  background: #E5CAFD;
   transition: 0.3s;
 }
 
@@ -142,7 +201,23 @@ footer {
 .d-flex-wrap{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
+}
+
+@media (min-width: 576px) { 
+  .d-flex-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+ }
+
+ @media (min-width: 1200px) {
+  .d-flex-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
 }
 
 .wrap-article{
@@ -152,7 +227,6 @@ footer {
 }
 
 h3{
-  padding-top: 30px;
   padding-bottom: 15px;
 }
 
@@ -184,9 +258,10 @@ h1{
 
 textarea{
     border: none;
-    background: white;
+    background: #F5F5F5;
     margin-bottom: 13px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 textarea:focus-visible{
@@ -200,7 +275,7 @@ textarea:focus-visible{
 
 
 .placeholder-input-field input[type=text]:invalid {
-  background-color: #ffff;
+  background-color: #F5F5F5;
 }
 
 .placeholder-input-field input[type=text]:valid {
@@ -221,7 +296,7 @@ textarea:focus-visible{
   visibility: hidden;
 }
 .custom-file-input::before {
-  content: 'Select some files';
+  content: 'Voeg een profiel foto toe (png)';
   display: inline-block;
   background: linear-gradient(top, #f9f9f9, #e3e3e3);
   border: 1px solid #999;
@@ -233,7 +308,7 @@ textarea:focus-visible{
   cursor: pointer;
   text-shadow: 1px 1px #fff;
   font-weight: 700;
-  font-size: 10pt;
+  font-size: 10px;
 }
 .custom-file-input:hover::before {
   border-color: black;
@@ -241,3 +316,189 @@ textarea:focus-visible{
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+
+.background-section{
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* -------------- Pagina-algemeen -------------- */
+
+.pagina-algemeen .img-header{
+ width: 100%;
+ max-width: 350px;
+ border-radius: 20px;
+ aspect-ratio: 1 / 1;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.pagina-algemeen img.img-icons{
+  width: 75%;
+ }
+
+.background-person{
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+/* grid */
+.grid-container{
+  display: grid;
+  grid-template-columns: 10fr;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.grid-container-1{
+  display: grid;
+  grid-template-columns: 10fr;
+}
+
+.grid-4{
+  display: grid;
+  grid-template-columns: 10fr 10fr;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.grid-3{
+  display: grid;
+  grid-template-columns: 10fr;
+}
+
+@media (min-width: 576px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: 10fr 15fr;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  .grid-container-1{
+    display: grid;
+    grid-template-columns: 20fr 5fr;
+  }
+  .grid-4{
+    display: grid;
+    grid-template-columns: 10fr 10fr;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .grid-3{
+    display: grid;
+    grid-template-columns: 10fr 10fr;
+  }
+}
+
+
+
+.grid-1{
+  display: flex;
+  justify-content: center;
+}
+
+.grid-2 h3{
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.grid-2 h4{
+  color: #939393;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+.grid-2 p{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.hour-h3{
+  font-size: 20px !important;
+  padding: 0px !important;
+  font-weight: 400;
+  margin-top: 20px;
+}
+.hour-h3 span{
+  font-weight: 600;
+}
+
+
+.grid-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.start-end-grid{
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.grid-3 .Avond, .grid-3 .Middag, .grid-3 .Ochtend{
+  background-color: #b4ffb4;
+}
+
+/* button mail and delete */
+
+.button-algemeen{
+  width: 100%;
+  max-width: 50px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  background: #fa9ef7;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.button-algemeen:hover{
+  background: #E5CAFD;
+  transition: 0.3s;
+}
+
+.button-form-delete{
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.button-form-delete:hover{
+  background: none;
+  border: none;
+}
+
+/* padding */
+
+.grid-3 p{
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.grid-3 p strong{
+  margin-right: 2px;
+}
+
+.pagina-algemeen{
+  display: grid;
+  grid-template-columns: 10fr;
+  gap: 20px;
+}
+
+@media (min-width: 992px) { 
+  .pagina-algemeen{
+    display: grid;
+    grid-template-columns: 10fr 10fr;
+    gap: 20px;
+  }
+ }

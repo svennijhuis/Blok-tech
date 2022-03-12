@@ -37,18 +37,18 @@
 // 	console.log(req.body);
 // 	const { name, surname, mail, streetnameAndNumber, image } = req.body;
 // 	userCollection.insertOne({ name: name, surname: surname, mail: mail, streetnameAndNumber: streetnameAndNumber, image:image });
-// 	res.redirect('/about')
+// 	res.redirect('/algemeen')
 // });
 
 // // home
 // app.get('/',  (req, res) => {
 // 	res.render('main');
 // });
-// // about
-// app.get('/about', async (req, res) => {
+// // algemeen
+// app.get('/algemeen', async (req, res) => {
 // 	const users = await userCollection.find().toArray();
 // 	console.log(users);
-// 	res.render('about', { users, image: req.file });
+// 	res.render('algemeen', { users, image: req.file });
 // });
 
 // app.get('*', (req, res) => {
@@ -57,31 +57,27 @@
 
 // app.listen(port, () => console.log(`App listening to port ${port}`));
 
-
-const fs = require('fs')
+const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = 3000;
 // .env
-require('dotenv').config()
-
+require('dotenv').config();
 
 // voegt de image toe aan de map uploads
-const multer  = require('multer')
+const multer = require('multer');
 // const upload = multer({ dest: 'static/uploads/' })
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-	cb(null, 'static/uploads');
+		cb(null, 'static/uploads');
 	},
 	filename: (req, file, cb) => {
-	cb(null, Date.now() + '.png');
-	}
-	});
-	const upload = multer({
-	storage
-	});
-
-
+		cb(null, Date.now() + '.png');
+	},
+});
+const upload = multer({
+	storage,
+});
 
 //Loads the handlebars module
 const handlebars = require('express-handlebars');
@@ -110,20 +106,20 @@ client.connect(err => {
 });
 
 // static info
-app.use(express.static('static'));
+// app.use(express.static('static'));
+app.use(express.static(__dirname + '/static'));
 
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
 
-
 // form
 app.post('/createUser', upload.single('image'), async (req, res, next) => {
 	const { name, surname, mail, streetnameAndNumber, city, Postal, HourlyRate, monday, tuesday, wednesday, thursday, friday, saturday, sunday, WieBenIk } = req.body;
-	await userCollection.insertOne({ 
-		name: name, 
-		surname: surname, 
-		mail: mail, 
-		streetnameAndNumber: streetnameAndNumber, 
+	await userCollection.insertOne({
+		name: name,
+		surname: surname,
+		mail: mail,
+		streetnameAndNumber: streetnameAndNumber,
 		city: city,
 		Postal: Postal,
 		HourlyRate: HourlyRate,
@@ -135,11 +131,10 @@ app.post('/createUser', upload.single('image'), async (req, res, next) => {
 		saturday: saturday,
 		sunday: sunday,
 		WieBenIk: WieBenIk,
-		image: `uploads/${req.file.filename}`
+		image: `uploads/${req.file.filename}`,
 	});
-	res.redirect('/about')
+	res.redirect('/algemeen');
 });
-
 
 // delete gebruiker
 app.post('/deleteUser', (req, res) => {
@@ -150,27 +145,24 @@ app.post('/deleteUser', (req, res) => {
 	// 		console.log(err);
 	// 	})
 	// } );
-	userCollection.deleteOne({  id: req.body._id });
-	res.redirect('/about')
+	userCollection.deleteOne({ id: req.body._id });
+	res.redirect('/algemeen');
 });
-
-
 
 // aanmeld pagina
-app.get('/',  (req, res) => {
+app.get('/', (req, res) => {
 	res.render('main');
 });
-// about - algemene pagina
-app.get('/about', async (req, res) => {
+// algemeen - algemene pagina
+app.get('/algemeen', async (req, res) => {
 	const users = await userCollection.find().toArray();
 	// console.log(users);
-	res.render('about', { users });
+	res.render('algemeen', { users });
 });
 
 // error pagina
 app.get('*', (req, res) => {
 	res.render('errors');
 });
-
 
 app.listen(port, () => console.log(`App listening to port ${port}`));

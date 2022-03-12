@@ -1,154 +1,160 @@
 <main>
 	<section>
-		<h1>Aanmeldformulier {{name}}</h1>
+		<h1>Aanmeldformulier</h1>
 		<p>Meld je hier aan als je graag wil opppassen. In dit formulier vul je jouw persoonsgegevens in. Daarnaast moet je aangeven wat je per uw wilt gaan beginnn. Als je dit heb ikgevuld kan je aangeven welke dagen je beschikbaar bent als oppas.</p>
 	</section>
-	<section>
-		<form action='/createUser' method='POST' enctype="multipart/form-data">
-		<article>
-			<h3>persoonsgegevens</h3>
-		</article>
+	<form action='/createUser' method='POST' enctype="multipart/form-data">
+		<section class="background-section">
 			<article>
-				<div class='placeholder-input-field'>
-					<input type='text' placeholder='Voornaam' name='name' required/>
-					<label for='voornaam'>Voornaam</label>
-				</div>
-				<div class='placeholder-input-field'>
-					<input type='text' placeholder='Achternaam' name='surname' required/>
-					<label for='voornaam'>Achternaam</label>
-				</div>
-				<div class='placeholder-input-field'>
-					<input type='email' placeholder='E-mailadres' name='mail' required/>
-					<label for='voornaam'>E-mailadres</label>
-				</div>
+				<h3>persoonsgegevens</h3>
 			</article>
 			<article>
-				<div class='placeholder-input-field'>
-					<input type='text' placeholder='Straatnaam + nummer' name='streetnameAndNumber' required/>
-					<label for='voornaam'>Straatnaam + nummer</label>
-				</div>
-				<div class='placeholder-input-field'>
-					<input type='text' placeholder='Plaats' name='city' required/>
-					<label for='voornaam'>Plaats</label>
-				</div>
-				<div class='placeholder-input-field'>
-					<input type='text' placeholder='Postcode' name='Postal' required/>
-					<label for='voornaam'>Postcode</label>
-				</div>
+					<div class='placeholder-input-field'>
+						<input type='text' placeholder='Voornaam' name='name' required/>
+						<label for='voornaam'>Voornaam</label>
+					</div>
+					<div class='placeholder-input-field'>
+						<input type='text' placeholder='Achternaam' name='surname' required/>
+						<label for='Achternaam'>Achternaam</label>
+					</div>
+					<div class='placeholder-input-field'>
+						<input type='email' placeholder='E-mailadres' name='mail' required/>
+						<label for='E-mailadres'>E-mailadres</label>
+					</div>
+					<div class='placeholder-input-field'>
+						<input type='text' placeholder='Straatnaam + nummer' name='streetnameAndNumber' required/>
+						<label for='Straatnaam + nummer'>Straatnaam + nummer</label>
+					</div>
+					<div class='placeholder-input-field'>
+						<input type='text' placeholder='Plaats' name='city' required/>
+						<label for='city'>Plaats</label>
+					</div>
+					<div class='placeholder-input-field'>
+						<input type='text' placeholder='Postcode' name='Postal' required/>
+						<label for='Postcode'>Postcode</label>
+					</div>
+			</article>
+		</section>
+		<section class="background-section">
+			<article>
+				<h3>Uurtarief</h3>
 			</article>
 			<article>
-				<h3>Tarief <span class="font-size-small">€12,00</span></h3>
+						{{!-- <input type='text' placeholder='Uurtarief' name='HourlyRate' required/> --}}
+				<select name="HourlyRate">
+					<option value="8,00">€8,00</option>
+					<option value="9,00">€9,00</option>
+					<option value="10,00">€10,00</option>
+					<option value="11,00">€11,00</option>
+					<option value="12,00">€11,00</option>
+					<option value="13,00">€13,00</option>
+					<option value="14,00">€14,00</option>
+					<option value="15,00">€15,00</option>
+				</select>
+						{{!-- <label for='uurtarief'>Uurtarief</label> --}}
 			</article>
-			<article>
-				<div class='placeholder-input-field'>
-					{{!-- <input type='text' placeholder='Uurtarief' name='HourlyRate' required/> --}}
-					<select name="HourlyRate">
-						<option value="€8,00">€8,00</option>
-						<option value="€9,00">€9,00</option>
-						<option value="€10,00">€10,00</option>
-						<option value="€11,00">€11,00</option>
-						<option value="€12,00">€11,00</option>
-						<option value="€13,00">€13,00</option>
-						<option value="€14,00">€14,00</option>
-						<option value="€15,00">€15,00</option>
-					</select>
-					{{!-- <label for='uurtarief'>Uurtarief</label> --}}
-				</div>
-			</article>
+		</section>
+		<section class="background-section">
 			<article>
 				<h3>Dagen beschikbaar <span class="font-size-small">Gehele dag / Ochtend / Middag / Avond</span></h3>
 			</article>
-			<article class="wrap-article">
-				<div class="d-flex-wrap">
-					<label for='monday'>Maandag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='monday' /> --}}
-					<select name="monday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='tuesday'>Dinsdag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='tuesday'/> --}}
-					<select name="tuesday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='wednesday'>Woensdag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='wednesday' /> --}}
-					<select name="wednesday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='thursday'>Donderdag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='thursday' /> --}}
-					<select name="thursday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='friday'>Vrijdag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='friday' /> --}}
-					<select name="friday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='saturday'>Zaterdag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='saturday'/> --}}
-					<select name="saturday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-				<div class="d-flex-wrap">
-					<label for='sunday'>Zondag</label>
-					{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='sunday' /> --}}
-					<select name="sunday">
-						<option value="Niet beschikbaar">Niet beschikbaar</option>
-						<option value="Gehele dag">Gehele dag</option>
-						<option value="Ochtend">Ochtend </option>
-						<option value="Middag">Middag</option>
-						<option value="Avond">Avond</option>
-					</select>
-				</div>
-			</article>
 			<article>
-				<h3>Voorstellen</h3>
+					<div class="d-flex-wrap">
+						<label for='monday'>Maandag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='monday' /> --}}
+						<select name="monday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='tuesday'>Dinsdag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='tuesday'/> --}}
+						<select name="tuesday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='wednesday'>Woensdag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='wednesday' /> --}}
+						<select name="wednesday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='thursday'>Donderdag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='thursday' /> --}}
+						<select name="thursday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='friday'>Vrijdag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='friday' /> --}}
+						<select name="friday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='saturday'>Zaterdag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='saturday'/> --}}
+						<select name="saturday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
+					<div class="d-flex-wrap">
+						<label for='sunday'>Zondag</label>
+						{{!-- <input type='text' placeholder='Gehele dag / Ochtend / Middag / Avond' name='sunday' /> --}}
+						<select name="sunday">
+							<option value="Niet beschikbaar">Niet beschikbaar</option>
+							<option value="Gehele dag">Gehele dag</option>
+							<option value="Ochtend">Ochtend </option>
+							<option value="Middag">Middag</option>
+							<option value="Avond">Avond</option>
+						</select>
+					</div>
 			</article>
-			<article class="article-voorstel">
-				<textarea  name="WieBenIk" placeholder='Wie ben ik' rows="3" required></textarea>
-				<input class="pt-half custom-file-input" type="file" name="image">
-			</article>
-			<article class="pt-full article-voorstel-input">
-				<input type="checkbox" name="voorwaarde" value="voorwaarde" required>
- 				<label for="voorwaarde">Accepteer <u><a href="">de Algemene voorwaarden.</a></u></label><br>
-			</article>
-			<button>Voeg je profiel toe</button>
-		</form>
-	</section>
+		</section>
+		<section class="background-section">
+				<article>
+					<h3>Voorstellen</h3>
+				</article>
+				<article class="article-voorstel">
+					<textarea  name="WieBenIk" placeholder='Wie ben ik' rows="3" maxlength="300" required></textarea>
+					<input class="pt-half custom-file-input" type="file" name="image" accept="image/png" required>
+				</article>
+		</section>
+		<section class="background-section">
+				<article class=" article-voorstel-input">
+					<input type="checkbox" name="voorwaarde" value="voorwaarde" required>
+					<label for="voorwaarde">Accepteer <u><a href="#">de Algemene voorwaarden.</a></u></label><br>
+				</article>
+		</section>
+		<section>
+				<button class="button-aanmelden">Voeg je profiel toe</button>
+		</section>
+	</form>
 </main>
