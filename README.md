@@ -54,7 +54,7 @@ De meeste informatie heb ik gekregen uit de lessen. Daarnaast heb ik ook veel in
 <a href="https://github.com/svennijhuis/Blok-tech/blob/main/license" target="_blank">Licentie van dit project</a>
 
 #
-### contact
+### Contact
 Naam - Sven Nijhuia
 Email - <a href="mailto:sven.nijhuis@hva.nl" target="_blank">sven.nijhuis@hva.nl</a>
 
