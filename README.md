@@ -55,8 +55,8 @@ De meeste informatie heb ik gekregen uit de lessen. Daarnaast heb ik ook veel in
 
 #
 ### Contact
-Naam - Sven Nijhuia
-Email - <a href="mailto:sven.nijhuis@hva.nl" target="_blank">sven.nijhuis@hva.nl</a>
+* Naam - Sven Nijhuis
+* Email - <a href="mailto:sven.nijhuis@hva.nl" target="_blank">sven.nijhuis@hva.nl</a>
 
 
 
