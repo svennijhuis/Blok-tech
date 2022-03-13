@@ -36,7 +36,7 @@ app.engine(
 );
 
 // connect
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@schoolproject.fn6hb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 let userCollection;
@@ -79,10 +79,14 @@ app.post('/createUser', upload.single('image'), async (req, res, next) => {
 });
 
 // delete gebruiker
-app.post('/deleteUser', (req, res) => {
-	userCollection.deleteOne({ id: req.body._id });
+app.post('/deleteUser',  (req, res) => {
+	console.log(req.body._id);
+	userCollection.deleteOne({id: req.body._id});
 	res.redirect('/algemeen');
 });
+
+
+
 
 // aanmeld pagina
 app.get('/', (req, res) => {
@@ -101,3 +105,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => console.log(`App listening to port ${port}`));
+
+
