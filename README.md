@@ -13,7 +13,7 @@ Naast het aanmeldformulier kan je ook alle profielen bekijken en daarnaast conta
 * De gebruikers kunnen dezelfde informatie opgeven omdat het wordt opgeslagen in ID.
 
 > "Algemene pagina"
-* Je kan de profiel foto zien die wordt opgeslagen in static/uploads.
+* Je kan de profiel foto zien die wordt opgeslagen in static/uploads (Ik heb dit gedaab met npm multer).
 * Je kan een profiel verwijderen uit de database.
 * Je kan contact opnemen via de mail.
 

@@ -30,7 +30,8 @@
 						<a class="button-algemeen" href="mailto:{{this.mail}}"><img class="img-icons" src="/img/mail.svg" alt="mail"></a>
 						<div class="button-algemeen">
 							<form action="/deleteUser"  method='POST'>
-								<button class="button-form-delete" name="deleteId" value="{{this._id}}"><img class="img-icons" src="/img/delete.svg" alt="delete"></button>
+							    <input name="button" type="hidden" value="{{this.name}}" />
+								<button type="submit" class="button-form-delete"><img class="img-icons" src="/img/delete.svg" alt="delete"></button>
 							</form>
 						</div>
 					</div>

@@ -1,4 +1,3 @@
-const fs = require('fs');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -7,7 +6,6 @@ require('dotenv').config();
 
 // voegt de image toe aan de map uploads
 const multer = require('multer');
-// const upload = multer({ dest: 'static/uploads/' })
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'static/uploads');
@@ -48,13 +46,12 @@ client.connect(err => {
 });
 
 // static info
-// app.use(express.static('static'));
 app.use(express.static(__dirname + '/static'));
 
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded({ extended: true }));
 
-// form
+// form aanmelden
 app.post('/createUser', upload.single('image'), async (req, res, next) => {
 	const { name, surname, mail, streetnameAndNumber, city, Postal, HourlyRate, monday, tuesday, wednesday, thursday, friday, saturday, sunday, WieBenIk } = req.body;
 	await userCollection.insertOne({
@@ -79,13 +76,15 @@ app.post('/createUser', upload.single('image'), async (req, res, next) => {
 });
 
 // delete gebruiker
-app.post('/deleteUser',  (req, res) => {
-	console.log(req.body._id);
-	userCollection.deleteOne({id: req.body._id});
+app.post("/deleteUser", async (req, res) => {
+
+	await client.connect()
+
+	client.db('userInfo').collection('users').deleteOne({ name: req.body.button });
+  
 	res.redirect('/algemeen');
-});
-
-
+  
+  });
 
 
 // aanmeld pagina
