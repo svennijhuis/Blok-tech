@@ -53,10 +53,6 @@ body {
 
 }
 
-body .moon-btn{
-  display: none;
-}
-
 body.dark-theme {
   --color-background: #000;
   --color-first: #fff;
@@ -65,10 +61,6 @@ body.dark-theme {
   --color-button-hover: #E5CAFD;
   --color-input: #F5F5F5;
 
-}
-
-.dark-theme .moon-btn{
-  display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,13 +82,6 @@ body.dark-theme {
     --color-input: #F5F5F5;
 
   }  
-  .light-theme .sun-btn{
-    display: block;
-  }
-
-  .sun-btn{
-    display: none;
-  }
 }
 
 /****************************/
@@ -117,6 +102,14 @@ p{
 /****************************/
 body{
   background-color: var(--color-background);
+}
+
+p.black-white{
+ color: var(--color-first);
+}
+
+h1.black-white{
+ color: var(--color-first);
 }
 /****************************/
 /**** Padding - margin ***/
@@ -210,38 +203,13 @@ transition: 0.3s;
 }
 
 /**** button - dark light ***/
-.sun-btn{
-  width: 30px;
-}
-
-.dark-theme .sun-btn{
-  display: none;
-}
-
-.dark-theme.light-theme .sun-btn{
-  display: block;
-}
-
-.moon-btn{
-  width: 20px;
-  display: none;
-}
-
-.dark-theme.light-theme .moon-btn{
-  display: none;
-}
-
-.light-theme.dark-theme{
-  display: block;
-}
-
-.light-theme .moon-btn{
-  display: none;
-}
-
 .btn-toggle{
-  background: none;
   border: none;
+  width: 100px;
+  height: 40px;
+  background: var(--color-button);
+  color: #000;
+  border-radius: 10px;
 }
 
 /****************************/
@@ -283,6 +251,7 @@ header article:nth-of-type(1){
   width: 95%;
   margin-right: 100px;
   margin-left: 100px;
+  align-items: center;
 }
 /****************************/
 /**** Footer ***/
