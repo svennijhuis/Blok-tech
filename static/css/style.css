@@ -315,20 +315,20 @@ select{
   margin: 0px;
 }
 .placeholder-input-field input ~ label {
-opacity: 0;
+  opacity: 0;
   order: 0;
   transition: .5s;
   font-size: 11px;
 }
 
 .placeholder-input-field input:focus ~ label  {
-opacity: 1 !important;
+  opacity: 1 !important;
   transition: .5s;
   font-size: 11px;
 }
 
 .placeholder-input-field input:focus::placeholder  {
-color: transparent;
+  color: transparent;
 }
 
 .placeholder-input-field input{
@@ -606,4 +606,9 @@ outline: none;
 
 .error-h1{
   color: var(--color-button);
+}
+
+.justify-content-center{
+  display: flex;
+  justify-content: center;
 }
