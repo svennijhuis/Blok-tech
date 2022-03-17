@@ -53,6 +53,10 @@ body {
 
 }
 
+body .moon-btn{
+  display: none;
+}
+
 body.dark-theme {
   --color-background: #000;
   --color-first: #fff;
@@ -220,10 +224,15 @@ transition: 0.3s;
 
 .moon-btn{
   width: 20px;
+  display: none;
 }
 
 .dark-theme.light-theme .moon-btn{
   display: none;
+}
+
+.light-theme.dark-theme{
+  display: block;
 }
 
 .light-theme .moon-btn{
@@ -620,3 +629,12 @@ outline: none;
      gap: 20px;
    }
   }
+
+
+/****************************/
+/**** Error page ***/
+/****************************/
+
+.error-h1{
+  color: var(--color-button);
+}
