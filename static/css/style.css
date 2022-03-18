@@ -22,7 +22,6 @@ main{
   margin-left: auto;
   margin-right: auto;
   width: 90vw;
-  min-height: 90vh;
 }
 
 @media screen and (min-width: 62em) {
