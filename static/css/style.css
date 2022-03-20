@@ -101,6 +101,7 @@ p{
 /****************************/
 body{
   background-color: var(--color-background);
+  position: relative;
 }
 
 p.black-white{
@@ -454,6 +455,73 @@ outline: none;
   flex-wrap: wrap;
   flex-direction: column;
 }
+
+/**** Popup nieuwsbrief ***/
+.show-modal {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+  border: none;
+  background-color: var(--color-button);
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 75px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+@media (min-width: 992px) { 
+  .modal {
+    width: 70%;
+    padding: 50px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
 /****************************/
 /**** Pagina - Algemeen ***/
 /****************************/
@@ -598,7 +666,6 @@ outline: none;
    }
   }
 
-
 /****************************/
 /**** Error page ***/
 /****************************/
@@ -610,4 +677,24 @@ outline: none;
 .justify-content-center{
   display: flex;
   justify-content: center;
+}
+
+/****************************/
+/**** Fade in ***/
+/****************************/
+
+.sectionfadein {
+  animation: 2s fadeIn-1;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn-1 {
+  0% {
+      transform: translateY(20%);
+      opacity: 0;
+}
+  100%{
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
