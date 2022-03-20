@@ -684,11 +684,12 @@ outline: none;
 /****************************/
 
 .sectionfadein {
-  animation: 2s fadeIn-1;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
-@keyframes fadeIn-1 {
+@keyframes fadeIn {
   0% {
       transform: translateY(20%);
       opacity: 0;
